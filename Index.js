@@ -49,11 +49,11 @@ console.log("plant more plants there is room")
  
 // On third Week
 
-let allPlants2 =allPlants*6
+let allPlants2 =allPlants*6;
 
 percentage2 =(allPlants2/totalPlants)*100
 
-console.log(percentage2, totalPlants)
+console.log(percentage2, totalPlants);
 
 
 if (percentage2>80){
@@ -67,3 +67,42 @@ if (percentage2>80){
  else (percentage2<50)
  {
 console.log("plant more plants there is room")}
+
+
+// Think bigger
+ const ttlPlants=100;
+weeks =10
+// Calculate the plants increase
+for (let i =0; i<weeks; i++) {
+    ttlPlants *=2;
+}
+areaOcupied2 =ttlPlants*spacePerPlant
+
+newRadius=sqrt(areaOcupied2/PI);
+console.log(areaOcupied2);
+console.log(newRadius)
+console.log(ttlPlants)
+
+// Error in Judgement
+try{  
+let totalPlants2=100;
+weeks =5;
+
+spaceRequired=totalPlants2*spacePerPlant
+availableArea =PI*r*r;
+
+let x = 10;
+
+
+	if (spaceRequired>availableArea){
+        console.log("not enough space")
+		
+		throw new Error("not enough space")
+    };
+
+	console.log("total plants is okay")
+} catch (err) {
+	console.log(err);
+} finally {
+	console.log("The scientist should consider their plant")
+}
